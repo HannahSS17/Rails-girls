@@ -28,6 +28,6 @@ class EntriesController < ApplicationController
   def destroy
     @entry = Entry.find(params["id"])
     @entry.destroy
-    redirect_to(entries_path, notice: "The text was deleted")
+    redirect_to(entries_path, notice: "The text was deleted ...")
   end
 end
