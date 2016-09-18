@@ -19,7 +19,7 @@ class EntriesController < ApplicationController
   end
 
   def update
-    entry_params = params["entry"].permit("title", "contents")
+    entry_params = params["entry"].permit("title", "contents", "image")
     entry = Entry.find(params["id"])
     entry.update(entry_params)
     redirect_to(entry_path(entry), notice: "The text was updated")
